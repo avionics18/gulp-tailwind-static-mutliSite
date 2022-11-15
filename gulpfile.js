@@ -9,9 +9,9 @@ const browsersync = require("browser-sync").create();
 function tailwindTask() {
 	const processors = [tailwindcss, autoprefixer, cssnano];
 
-	return src("src/css/style.css")
-		.pipe(postcss(processors))
-		.pipe(dest("dist/css"));
+  return src("src/css/style.css")
+    .pipe(postcss(processors))
+    .pipe(dest("dist/css"));
 }
 
 // browsersync task
