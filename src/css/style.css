@@ -2,6 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+#hero-area {
+  background-image: url("https://www.usafa.edu/app/uploads/211007-F-NH566-1002.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+}
+
 footer {
 	background-image: url('https://images.fineartamerica.com/images-medium-large-5/bright-abstract-background-flame-oxygen.jpg');
 	background-repeat: no-repeat;
