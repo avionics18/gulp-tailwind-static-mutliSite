@@ -5,28 +5,40 @@ const autoprefixer = require("autoprefixer");
 const cssnano = require("cssnano");
 const terser = require("gulp-terser");
 const browsersync = require("browser-sync").create();
+const rename = require("gulp-rename");
+
+// ==> Project Specific Config
+const baseDir = `./src/mech`;
+console.log(baseDir);
+
 
 // tailwind task
 function tailwindTask() {
-	const processors = [tailwindcss, autoprefixer, cssnano];
+	if(process.env.NODE_ENV == "production") {
+		processors = [tailwindcss(`${baseDir}/css/tailwind.config.js`), autoprefixer, cssnano];
+	} else {
+		processors = [tailwindcss(`${baseDir}/css/tailwind.config.js`)];
+	}
 
-  return src("src/css/style.css")
+  return src(baseDir + "/css/index.css")
     .pipe(postcss(processors))
-    .pipe(dest("dist/css"));
+    .pipe(rename("style.css"))
+    .pipe(dest(baseDir + "/css/"));
 }
 
 // Js Task
 function jsTask() {
-	return src("src/js/script.js", {sourcemaps: true})
+	return src(baseDir + "/js/index.js", {sourcemaps: false})
 		.pipe(terser())
-		.pipe(dest("dist/js", {sourcemaps: "."}));
+		.pipe(rename("main.js"))
+		.pipe(dest(baseDir + "/js/", {sourcemaps: "."}));
 }
 
 // browsersync task
 function bsServe(cb) {
 	browsersync.init({
 		server: {
-			baseDir: "."
+			baseDir,
 		}
 	});
 
@@ -40,8 +52,11 @@ function bsReload(cb) {
 
 // Gulp Workflow
 function watchTask() {
-	watch(["*.html", "src/css/style.css"], series(tailwindTask, bsReload));
-	watch(["src/js/script.js"], series(jsTask, tailwindTask, bsReload));
+	const htmlFiles = baseDir + "/*.html";
+	const cssFiles = baseDir + "/css/index.css";
+	const jsFiles = baseDir + "/js/index.js";
+	watch([htmlFiles, cssFiles], series(tailwindTask, bsReload));
+	watch([jsFiles], series(jsTask, tailwindTask, bsReload));
 }
 
 exports.default = series(
