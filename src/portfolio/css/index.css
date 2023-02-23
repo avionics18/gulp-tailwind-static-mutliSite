@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+body {
+  @apply bg-slate-200;
+}
+
+.navbar .navbar__lang-item.active,
+.navbar .navbar__menu-item.active {
+  @apply text-black font-bold;
+}
+
+.content-prose {
+  @apply prose lg:prose-lg m-auto pb-10 prose-p:font-serif prose-ul:font-serif hover:prose-a:text-black;
+}
