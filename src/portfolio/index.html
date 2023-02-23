@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Portfolio</title>
+	<!-- Main Stylesheet -->
+	<link rel="stylesheet" href="css/style.css">
+	<!-- Google Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+	<header>
+		<nav id="main-navbar" class="pt-10">
+		  <div class="container">
+		    <div class="navbar m-auto grid grid-cols-12">
+		      <div class="navbar__logo col-span-12 mb-2 border-b border-slate-400 pb-2 xl:col-span-3">
+		        <span class="text-3xl font-bold uppercase">AV</span>
+		      </div>
+		      <div class="navbar__menu col-span-12 mb-2 flex items-center justify-between border-b border-slate-400 pb-2 lg:col-span-6 xl:col-span-6 xl:justify-around">
+		        <a href="#" class="navbar__menu-item active text-slate-600 hover:text-black">Home</a>
+		        <a href="#" class="navbar__menu-item text-slate-600 hover:text-black">Project</a>
+		        <a href="#" class="navbar__menu-item text-slate-600 hover:text-black">Resume</a>
+		        <a href="#" class="navbar__menu-item text-slate-600 hover:text-black">About</a>
+		        <a href="#" class="navbar__menu-item text-slate-600 hover:text-black">Contact</a>
+		      </div>
+		      <div class="navbar__groupLinks col-span-12 flex items-center justify-between border-b border-slate-400 pb-2 lg:col-span-6 lg:mb-2 lg:justify-end lg:gap-x-8 xl:col-span-3">
+		        <div class="navbar__lang flex items-center gap-x-2">
+		          <a href="#" class="navbar__lang-item active text-slate-600 hover:text-black">ENG</a>
+		          <span>/</span>
+		          <a href="#" class="navbar__lang-item text-slate-600 hover:text-black">हिन्दी</a>
+		        </div>
+		        <div class="navbar__socialLink flex items-center gap-x-2">
+		          <a href="#" class="navbar__socialLink-item text-slate-600 hover:text-black">
+		            <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2c2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2a4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6c-.6.6-.6 1.2-.5 2V21" /></svg>
+		          </a>
+		          <a href="#" class="navbar__socialLink-item text-slate-600 hover:text-black">
+		            <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+		              <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+		                <path d="M4 6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2zm4 5v5m0-8v.01M12 16v-5" />
+		                <path d="M16 16v-3a2 2 0 0 0-4 0" />
+		              </g>
+		            </svg>
+		          </a>
+		        </div>
+		      </div>
+		    </div>
+		  </div>
+		</nav>
+	</header>
+
+	<main id="content">
+		<div class="container">
+	    <h2 class="page-title text-4xl text-slate-600 font-bold font-serif text-center px-4 pt-12">Projects</h2>
+	    <div class="content-prose">
+	    	<div class="not-prose">
+		    	<p class="font-serif text-center text-base mt-6 mb-10">Check my commercial and non commercial projects.<br />If you have any questions feel free to ask me for more information.</p>
+		    	<div class="project__tags flex items-center justify-start flex-wrap gap-2 mb-6">
+			    	<button class="tag text-sm bg-black text-white border rounded-full px-3 py-1 shadow">All (10)</button>
+			    	<button class="tag text-sm bg-white border rounded-full px-3 py-1 shadow hover:text-white hover:bg-black">Java (5)</button>
+			    	<button class="tag text-sm bg-white border rounded-full px-3 py-1 shadow hover:text-white hover:bg-black">Spring (6)</button>
+			    	<button class="tag text-sm bg-white border rounded-full px-3 py-1 shadow hover:text-white hover:bg-black">Hibernate (3)</button>
+			    	<button class="tag text-sm bg-white border rounded-full px-3 py-1 shadow hover:text-white hover:bg-black">JDBC (4)</button>
+			    	<button class="tag text-sm bg-white border rounded-full px-3 py-1 shadow hover:text-white hover:bg-black">MySQL (8)</button>
+			    	<button class="tag text-sm bg-white border rounded-full px-3 py-1 shadow hover:text-white hover:bg-black">Javascript (20)</button>
+			    	<button class="tag text-sm bg-white border rounded-full px-3 py-1 shadow hover:text-white hover:bg-black">Javascript (20)</button>
+			    </div>
+		    	<!-- .not-prose -->
+		    	<div class="project__grid grid grid-cols-1 sm:grid-cols-2 gap-8">
+		    		<div class="project__card group hover:bg-slate-50">
+		    			<img class="project__img overflow-hidden px-4 pt-4" src="https://via.placeholder.com/450x250" alt="placeholder">
+		    			<div class="project__cardBody p-4">
+		    				<h3 class="project__cardBody--title font-bold text-black text-2xl mb-2">Jobify</h3>
+		    				<p class="text-xs flex items-center flex-wrap gap-1 mb-3">
+		    					<a href="#" class="text-slate-600 hover:underline hover:text-black">#React</a>
+		    					<a href="#" class="text-slate-600 hover:underline hover:text-black">#NodeJs</a>
+		    					<a href="#" class="text-slate-600 hover:underline hover:text-black">#Express</a>
+		    					<a href="#" class="text-slate-600 hover:underline hover:text-black">#MongoDB</a>
+		    				</p>
+		    				<p class="font-serif text-sm text-slate-600 mb-3">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum saepe nobis aperiam repellendus quo reprehenderit...</p>
+		    				<div class="project__cardFooter text-xs flex items-center justify-between gap-2">
+		    					<a href="#" class="flex items-center justify-center gap-x-1 py-2 flex-1 bg-black text-white hover:bg-slate-700">
+		    						<svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M10 12a2 2 0 1 0 4 0a2 2 0 1 0-4 0"/><path d="M22 12c-2.667 4.667-6 7-10 7s-7.333-2.333-10-7c2.667-4.667 6-7 10-7s7.333 2.333 10 7"/></g></svg>
+		    						<span>Preview</span>
+		    					</a>
+		    					<a href="#" class="flex items-center justify-center gap-x-1 py-2 flex-1 bg-black text-white hover:bg-slate-700">
+		    						<svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2c2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2a4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6c-.6.6-.6 1.2-.5 2V21"/></svg>
+		    						<span>Github Repo</span>
+		    					</a>
+		    				</div>
+		    			</div>
+		    			<!-- .project__cardBody -->
+		    		</div>
+		    		<!-- .project__card -->
+
+		    	</div>
+		    	<!-- .project__grid -->
+	    	</div>
+	    	<!-- .not-prose -->
+	    </div>
+	  </div>
+	</main>
+
+</body>
+</html>

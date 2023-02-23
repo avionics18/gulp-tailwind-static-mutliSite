@@ -8,7 +8,7 @@ const browsersync = require("browser-sync").create();
 const rename = require("gulp-rename");
 
 // ==> Project Specific Config
-const baseDir = `./src/mech`;
+const baseDir = `./src/portfolio`;
 console.log(baseDir);
 
 
