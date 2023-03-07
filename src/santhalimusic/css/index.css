@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	body {
+		@apply bg-gray-800 text-gray-500;
+	}
+}
+
+@layer components {
+	#main-content {
+		@apply text-gray-400;
+	}
+	#main-content .page-heading {
+		@apply text-4xl font-bold font-serif text-white;
+	}
+	#main-content .page-subheading {
+		@apply text-4xl text-white font-medium font-serif mb-6;
+	}
+}

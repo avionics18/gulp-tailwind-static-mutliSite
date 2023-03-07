@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ajom | Santhali Song Collections &amp; Lyrics</title>
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;500;700&family=Jost:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet" />
+  </head>
+
+  <body>
+    <div class="hidden flexx items-center justify-center gap-x-2">
+      <div class="block px-4 py-1 bg-black text-white sm:bg-white sm:text-black border border-black">default</div>
+      <div class="block px-4 py-1 bg-white text-black sm:max-md:bg-black sm:max-md:text-white border border-black">sm</div>
+      <div class="block px-4 py-1 bg-white text-black md:max-lg:bg-black md:max-lg:text-white border border-black">md</div>
+      <div class="block px-4 py-1 bg-white text-black lg:max-xl:bg-black lg:max-xl:text-white border border-black">lg</div>
+      <div class="block px-4 py-1 bg-white text-black xl:bg-black xl:text-white border border-black">xl</div>
+    </div>
+    <!-- Tailwind Breakpoint Visualiser -->
+
+    <div id="master-app-wrapper" class="h-screen overflow-hidden flex items-stretch">
+      <aside class="sidebar w-72 bg-gray-900 border-r border-gray-700 overflow-y-auto overflow-x-hidden">
+        <div class="flex items-center py-8 px-10 border-b border-gray-700">
+          <img class="logo w-10 rounded-md" src="https://via.placeholder.com/120x120" alt="Logo" />
+          <h1 class="logo-brandname text-xl font-serif font-bold text-primary-300 ml-4">AJOM</h1>
+          <button class="sidebar-toggler-btn ml-auto bg-transparent text-white hover:text-primary-300" title="Toggle Sidebar">
+            <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <g fill="none">
+                <path
+                  d="M24 0v24H0V0h24ZM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035c-.01-.004-.019-.001-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427c-.002-.01-.009-.017-.017-.018Zm.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093c.012.004.023 0 .029-.008l.004-.014l-.034-.614c-.003-.012-.01-.02-.02-.022Zm-.715.002a.023.023 0 0 0-.027.006l-.006.014l-.034.614c0 .012.007.02.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01l-.184-.092Z"
+                />
+                <path fill="currentColor" d="M20 17.5a1.5 1.5 0 0 1 .144 2.993L20 20.5H4a1.5 1.5 0 0 1-.144-2.993L4 17.5h16Zm0-7a1.5 1.5 0 0 1 0 3H4a1.5 1.5 0 0 1 0-3h16Zm0-7a1.5 1.5 0 0 1 0 3H4a1.5 1.5 0 1 1 0-3h16Z" />
+              </g>
+            </svg>
+          </button>
+        </div>
+        <!-- Logo Brand & Toggle Sidebar Btn -->
+        <div class="sidenav">
+          <nav class="sidenav-top flex flex-col gap-4 py-8 px-10 border-b border-gray-700">
+            <a href="#" class="flex items-center gap-4 group is-active">
+              <svg class="w-6 h-6 group-hover:text-primary-300 group-[.is-active]:text-primary-300" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <g fill="none" fill-rule="evenodd">
+                  <path
+                    d="M24 0v24H0V0h24ZM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035c-.01-.004-.019-.001-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427c-.002-.01-.009-.017-.017-.018Zm.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093c.012.004.023 0 .029-.008l.004-.014l-.034-.614c-.003-.012-.01-.02-.02-.022Zm-.715.002a.023.023 0 0 0-.027.006l-.006.014l-.034.614c0 .012.007.02.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01l-.184-.092Z"
+                  />
+                  <path
+                    fill="currentColor"
+                    d="M13.228 2.688a2 2 0 0 0-2.456 0l-8.384 6.52C1.636 9.795 2.05 11 3.003 11h1.092l.82 8.199A2 2 0 0 0 6.905 21h10.19a2 2 0 0 0 1.99-1.801l.82-8.199h1.092c.952 0 1.368-1.205.615-1.791l-8.384-6.52ZM12 16a3 3 0 1 0 0-6a3 3 0 0 0 0 6Z"
+                  />
+                </g>
+              </svg>
+              <span class="uppercase font-medium text-sm text-white group-hover:text-primary-300 group-[.is-active]:text-primary-300">Home</span>
+            </a>
+            <a href="#" class="flex items-center gap-4 group">
+              <svg class="w-6 h-6 group-hover:text-primary-300 group-[.is-active]:text-primary-300" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <g fill="none">
+                  <path
+                    d="M24 0v24H0V0h24ZM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035c-.01-.004-.019-.001-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427c-.002-.01-.009-.017-.017-.018Zm.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093c.012.004.023 0 .029-.008l.004-.014l-.034-.614c-.003-.012-.01-.02-.02-.022Zm-.715.002a.023.023 0 0 0-.027.006l-.006.014l-.034.614c0 .012.007.02.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01l-.184-.092Z"
+                  />
+                  <path
+                    fill="currentColor"
+                    d="M10.077 2.614c.338-.76 1.379-.797 1.787-.114l.059.114l1.042 2.345a11 11 0 0 0 4.337 4.931l.322.189l1.85 1.04a1.01 1.01 0 0 1 .109 1.692l-.108.07l-1.851 1.04a11 11 0 0 0-4.502 4.782l-.157.338l-1.042 2.345c-.338.76-1.379.797-1.787.114l-.059-.114l-1.042-2.345a11 11 0 0 0-4.337-4.931l-.322-.189l-1.85-1.04a1.01 1.01 0 0 1-.109-1.692l.108-.07l1.851-1.04a11 11 0 0 0 4.502-4.782l.157-.338l1.042-2.345Zm9.144-.493a5.732 5.732 0 0 0 2.414 2.674c.16.09.16.32 0 .41A5.732 5.732 0 0 0 19.22 7.88a.241.241 0 0 1-.44 0a5.732 5.732 0 0 0-2.415-2.674a.236.236 0 0 1 0-.41A5.732 5.732 0 0 0 18.78 2.12a.241.241 0 0 1 .44 0Z"
+                  />
+                </g>
+              </svg>
+              <span class="uppercase font-medium text-sm text-white group-hover:text-primary-300 group-[.is-active]:text-primary-300">Featured</span>
+            </a>
+            <a href="#" class="flex items-center gap-4 group">
+              <svg class="w-6 h-6 group-hover:text-primary-300 group-[.is-active]:text-primary-300" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <g fill="none">
+                  <path
+                    d="M24 0v24H0V0h24ZM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035c-.01-.004-.019-.001-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427c-.002-.01-.009-.017-.017-.018Zm.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093c.012.004.023 0 .029-.008l.004-.014l-.034-.614c-.003-.012-.01-.02-.02-.022Zm-.715.002a.023.023 0 0 0-.027.006l-.006.014l-.034.614c0 .012.007.02.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01l-.184-.092Z"
+                  />
+                  <path
+                    fill="currentColor"
+                    d="M12 2a8 8 0 0 1 5 14.245v4.61a1.1 1.1 0 0 1-1.486 1.03L12 20.569l-3.514 1.318A1.1 1.1 0 0 1 7 20.856v-4.61A8 8 0 0 1 12 2Zm0 2a6 6 0 1 0 0 12a6 6 0 0 0 0-12Zm0 2a4 4 0 1 1 0 8a4 4 0 0 1 0-8Z"
+                  />
+                </g>
+              </svg>
+              <span class="uppercase font-medium text-sm text-white group-hover:text-primary-300 group-[.is-active]:text-primary-300">Charts</span>
+            </a>
+            <a href="#" class="flex items-center gap-4 group">
+              <svg class="w-6 h-6 group-hover:text-primary-300 group-[.is-active]:text-primary-300" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <g fill="none">
+                  <path
+                    d="M24 0v24H0V0h24ZM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035c-.01-.004-.019-.001-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427c-.002-.01-.009-.017-.017-.018Zm.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093c.012.004.023 0 .029-.008l.004-.014l-.034-.614c-.003-.012-.01-.02-.02-.022Zm-.715.002a.023.023 0 0 0-.027.006l-.006.014l-.034.614c0 .012.007.02.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01l-.184-.092Z"
+                  />
+                  <path fill="currentColor" d="M19.82 6a2 2 0 0 1 1.972 2.329l-1.666 10A2 2 0 0 1 18.153 20H5.847a2 2 0 0 1-1.973-1.671l-1.666-10A2 2 0 0 1 4.18 6ZM18 3a1 1 0 1 1 0 2H6a1 1 0 0 1 0-2Z" />
+                </g>
+              </svg>
+              <span class="uppercase font-medium text-sm text-white group-hover:text-primary-300 group-[.is-active]:text-primary-300">Playlists</span>
+            </a>
+            <a href="#" class="flex items-center gap-4 group">
+              <svg class="w-6 h-6 group-hover:text-primary-300 group-[.is-active]:text-primary-300" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <g fill="none">
+                  <path
+                    d="M24 0v24H0V0h24ZM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035c-.01-.004-.019-.001-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427c-.002-.01-.009-.017-.017-.018Zm.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093c.012.004.023 0 .029-.008l.004-.014l-.034-.614c-.003-.012-.01-.02-.02-.022Zm-.715.002a.023.023 0 0 0-.027.006l-.006.014l-.034.614c0 .012.007.02.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01l-.184-.092Z"
+                  />
+                  <path
+                    fill="currentColor"
+                    d="M13 13a4 4 0 0 1 4 4v1.5a1.5 1.5 0 0 1-1.5 1.5h-12A1.5 1.5 0 0 1 2 18.5V17a4 4 0 0 1 4-4h7Zm6 0a3 3 0 0 1 3 3v1.5a1.5 1.5 0 0 1-1.5 1.5H19v-2a4.992 4.992 0 0 0-2-4h2ZM9.5 3a4.5 4.5 0 1 1 0 9a4.5 4.5 0 0 1 0-9ZM18 6a3 3 0 1 1 0 6a3 3 0 0 1 0-6Z"
+                  />
+                </g>
+              </svg>
+              <span class="uppercase font-medium text-sm text-white group-hover:text-primary-300 group-[.is-active]:text-primary-300">Artists</span>
+            </a>
+          </nav>
+          <!-- .sidenav-top -->
+          <nav class="sidenav-bottom flex flex-col gap-4 py-8 px-10 border-b border-gray-700">
+            <a href="#" class="flex items-center gap-4 group">
+              <svg class="w-6 h-6 group-hover:text-primary-300 group-[.is-active]:text-primary-300" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <g fill="none" fill-rule="evenodd">
+                  <path
+                    d="M24 0v24H0V0h24ZM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035c-.01-.004-.019-.001-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427c-.002-.01-.009-.017-.017-.018Zm.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093c.012.004.023 0 .029-.008l.004-.014l-.034-.614c-.003-.012-.01-.02-.02-.022Zm-.715.002a.023.023 0 0 0-.027.006l-.006.014l-.034.614c0 .012.007.02.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01l-.184-.092Z"
+                  />
+                  <path
+                    fill="currentColor"
+                    d="M2 5a2 2 0 0 1 2-2h5.52a2 2 0 0 1 1.561.75l1.4 1.75H20a2 2 0 0 1 2 2V19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5Zm10 4a1 1 0 0 1 1 1v2h2a1 1 0 1 1 0 2h-2v2a1 1 0 1 1-2 0v-2H9a1 1 0 1 1 0-2h2v-2a1 1 0 0 1 1-1Z"
+                  />
+                </g>
+              </svg>
+              <span class="uppercase font-medium text-sm text-white group-hover:text-primary-300 group-[.is-active]:text-primary-300">Add a Song</span>
+            </a>
+            <a href="#" class="flex items-center gap-4 group">
+              <svg class="w-6 h-6 group-hover:text-primary-300 group-[.is-active]:text-primary-300" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <g fill="none">
+                  <path
+                    d="M24 0v24H0V0h24ZM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035c-.01-.004-.019-.001-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427c-.002-.01-.009-.017-.017-.018Zm.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093c.012.004.023 0 .029-.008l.004-.014l-.034-.614c-.003-.012-.01-.02-.02-.022Zm-.715.002a.023.023 0 0 0-.027.006l-.006.014l-.034.614c0 .012.007.02.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01l-.184-.092Z"
+                  />
+                  <path
+                    fill="currentColor"
+                    d="M12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10a9.95 9.95 0 0 1-5.168-1.438l-3.032.892A1.01 1.01 0 0 1 2.546 20.2l.892-3.032A9.958 9.958 0 0 1 2 12C2 6.477 6.477 2 12 2Zm-3.5 8.5a1.5 1.5 0 1 0 0 3a1.5 1.5 0 0 0 0-3Zm7 0a1.5 1.5 0 1 0 0 3a1.5 1.5 0 0 0 0-3Z"
+                  />
+                </g>
+              </svg>
+              <span class="uppercase font-medium text-sm text-white group-hover:text-primary-300 group-[.is-active]:text-primary-300">Feedback</span>
+            </a>
+          </nav>
+          <!-- .sidenav-bottom -->
+        </div>
+        <!-- .sidenav -->
+      </aside>
+      <!-- .sidebar -->
+
+      <main class="flex-1 overflow-y-auto overflow-x-hidden">
+        <nav class="navbar bg-gray-900 px-10 py-8 border-b border-gray-700 flex items-center justify-between sticky top-0">
+          <span class="news-link group">
+            <a
+              class="uppercase bg-transparent text-white text-sm py-2 px-4 border border-gray-700 rounded-full hover:bg-gray-700 hover:text-primary-300 group-[.is-active]:bg-gray-700 group-[.is-active]:text-primary-300"
+              href="#"
+              title="Latest News"
+            >
+              News
+            </a>
+          </span>
+          <!-- .news-link -->
+          <form id="searchForm" class="flex">
+            <input class="outline-none bg-gray-700 text-white py-2 px-6 rounded-tl-full rounded-bl-full border-r border-gray-600 focus:text-white" type="text" name="searchInput" id="searchInput" placeholder="Search and press Enter" />
+            <button class="bg-gray-700 py-2 px-4 rounded-tr-full rounded-br-full hover:bg-primary-300 hover:text-gray-900" type="button">
+              <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <g fill="none" fill-rule="evenodd">
+                  <path
+                    d="M24 0v24H0V0h24ZM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035c-.01-.004-.019-.001-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427c-.002-.01-.009-.017-.017-.018Zm.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093c.012.004.023 0 .029-.008l.004-.014l-.034-.614c-.003-.012-.01-.02-.02-.022Zm-.715.002a.023.023 0 0 0-.027.006l-.006.014l-.034.614c0 .012.007.02.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01l-.184-.092Z"
+                  />
+                  <path fill="currentColor" d="M10.5 2a8.5 8.5 0 1 0 5.262 15.176l3.652 3.652a1 1 0 0 0 1.414-1.414l-3.652-3.652A8.5 8.5 0 0 0 10.5 2ZM4 10.5a6.5 6.5 0 1 1 13 0a6.5 6.5 0 0 1-13 0Z" />
+                </g>
+              </svg>
+            </button>
+          </form>
+          <!-- #searchForm -->
+          <div class="info flex items-center">
+            <a class="hover:text-primary-300 mr-3 pr-3 border-r border-gray-700" href="#" title="Notifications">
+              <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <g fill="none">
+                  <path
+                    d="M24 0v24H0V0h24ZM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035c-.01-.004-.019-.001-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427c-.002-.01-.009-.017-.017-.018Zm.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093c.012.004.023 0 .029-.008l.004-.014l-.034-.614c-.003-.012-.01-.02-.02-.022Zm-.715.002a.023.023 0 0 0-.027.006l-.006.014l-.034.614c0 .012.007.02.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01l-.184-.092Z"
+                  />
+                  <path
+                    fill="currentColor"
+                    d="M15 19a2 2 0 0 1-1.85 1.995L13 21h-2a2 2 0 0 1-1.995-1.85L9 19h6ZM12 2a7 7 0 0 1 6.996 6.76L19 9v3.764l1.822 3.644a1.1 1.1 0 0 1-.869 1.586l-.115.006H4.162a1.1 1.1 0 0 1-1.03-1.487l.046-.105L5 12.764V9a7 7 0 0 1 7-7Z"
+                  />
+                </g>
+              </svg>
+            </a>
+            <!-- Notification Link -->
+            <a class="origin-center hover:rotate-[360deg] transition-all duration-200" href="#" title="About Us">
+              <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+                <g fill="none">
+                  <path
+                    fill="#C68D7B"
+                    d="M28.453 13.656c-.607-.81-2.14-1.344-3.375-.703c-1.234.64-2.13 1.294-2.5 1.64c0 0-.594.579-.594-.25v-9.5c0-1.67-1.187-2.843-2.687-2.843c-1.406 0-2.688 1.25-2.688 2.844v3.69c-.394-.83-1.076-1.159-1.945-1.159c-1.664 0-2.4 1.014-2.603 2.397a2.717 2.717 0 0 0-4.046.28v-1.38C8.016 7.016 6.892 6 5.454 6S2.97 7.313 2.97 8.672c0 1.36.078 12.031.078 12.031c0 6 4.531 9.277 9.717 9.277c2.709 0 5.293-1.24 7.08-3.105c1.188-1.24 2.052-2.731 2.767-3.967c.468-.809.873-1.508 1.264-1.955c1.233-1.41 2.717-2.473 3.76-3.219c.146-.105.285-.204.412-.297c1.031-.75 1.314-2.57.406-3.78Z"
+                  />
+                  <path
+                    fill="#A9715F"
+                    d="m17.56 5.54l.001-.034c.023-.522.058-1.33.302-2.062c.235-.704.63-1.249 1.325-1.442c-1.363.063-2.579 1.29-2.579 2.842v3.69c.242.51.375 1.21.375 2.137v3.033c0 1.787-.466 3.241-2.219 3.294c-.268-.02-.537-.036-.804-.048c-.857-.134-1.341-.524-1.614-1.048c-.318-.614-.347-1.411-.347-2.198v-3.033c0-.312.02-.613.061-.9a2.731 2.731 0 0 0-.787-.534a5.868 5.868 0 0 0-.114 1.18c0 .44-.012 1.044-.025 1.709l-.004.195c-.015.739-.03 1.535-.03 2.242c0 .836.256 1.49.516 2.016c-.286.181-.608.31-.953.375c-.259.01-.508.023-.743.035a2.736 2.736 0 0 1-2.483-2.729v-2.52c0-.386.079-.753.222-1.086c.03-.091.07-.18.119-.27c.06-.11.136-.223.237-.344V8.659c-.517.417-.881.818-1.114 1.243a2.69 2.69 0 0 0-.328 1.34c0 .127-.001.26-.004.399h-.015c.005.178.004.38 0 .6l-.009.287l-.016.57C6.46 15.521 6.447 19 9.327 19c1.34 0 1.88-.486 2.311-1.075l.164-.003c.39.615 1.167 1.078 2.405 1.078c.934 0 1.61-.31 2.1-.814c.391.065.765.143 1.113.238c-.507.17-1.116.402-1.778.708c-1.82.842-4.074 2.264-5.736 4.576a.5.5 0 1 0 .813.584c1.526-2.125 3.616-3.454 5.342-4.252a16.446 16.446 0 0 1 2.173-.826a12.478 12.478 0 0 1 .809-.212l.041-.009l.01-.002a.5.5 0 0 0 .147-.93c-.65-.356-1.453-.607-2.323-.78c.689-1.453.664-3.531.646-5.02l-.004-.368V5.539Z"
+                  />
+                </g>
+              </svg>
+            </a>
+            <!-- About Us Link -->
+          </div>
+          <!-- .info -->
+        </nav>
+        <!-- .navbar -->
+
+        <section id="main-content" class="p-10">
+          <div id="latest-songs" class="mb-28 last:mb-0">
+            <div class="flex items-center justify-between mb-6">
+              <h2 class="page-heading">Latest Songs</h2>
+              <a class="font-medium hover:text-primary-300 flex items-center gap-1 underline-offset-4 decoration-1 hover:underline" href="#">
+                <span>View All</span>
+                <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                  <g fill="none">
+                    <path
+                      d="M24 0v24H0V0h24ZM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035c-.01-.004-.019-.001-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427c-.002-.01-.009-.017-.017-.018Zm.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093c.012.004.023 0 .029-.008l.004-.014l-.034-.614c-.003-.012-.01-.02-.02-.022Zm-.715.002a.023.023 0 0 0-.027.006l-.006.014l-.034.614c0 .012.007.02.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01l-.184-.092Z"
+                    />
+                    <path fill="currentColor" d="m14.707 5.636l5.657 5.657a1 1 0 0 1 0 1.414l-5.657 5.657a1 1 0 0 1-1.414-1.414l3.95-3.95H4a1 1 0 1 1 0-2h13.243l-3.95-3.95a1 1 0 1 1 1.414-1.414Z" />
+                  </g>
+                </svg>
+              </a>
+            </div>
+            <!-- Section Heading -->
+            <div class="grid grid-cols-3 gap-6">
+              <div class="col-span-1 card bg-gray-700 p-6 rounded-lg shadow-lg">
+                <div class="card-img">
+                  <img class="w-full rounded-lg shadow-lg" src="https://via.placeholder.com/300x200" alt="Placeholder Image" />
+                </div>
+                <!-- .card-img -->
+                <div class="card-content">
+                  <h3 class="text-xl capitalize font-serif font-medium text-white mt-4">
+                    <a class="hover:text-primary-300 underline-offset-4 decoration-1 hover:underline" href="#">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</a>
+                  </h3>
+                </div>
+                <!-- .card-content -->
+              </div>
+              <!-- .card -->
+              <div class="col-span-1 card bg-gray-700 p-6 rounded-lg shadow-lg">
+                <div class="card-img">
+                  <img class="w-full rounded-lg shadow-lg" src="https://via.placeholder.com/300x200" alt="Placeholder Image" />
+                </div>
+                <!-- .card-img -->
+                <div class="card-content">
+                  <h3 class="text-xl capitalize font-serif font-medium text-white mt-4">
+                    <a class="hover:text-primary-300 underline-offset-4 decoration-1 hover:underline" href="#">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</a>
+                  </h3>
+                </div>
+                <!-- .card-content -->
+              </div>
+              <!-- .card -->
+              <div class="col-span-1 card bg-gray-700 p-6 rounded-lg shadow-lg">
+                <div class="card-img">
+                  <img class="w-full rounded-lg shadow-lg" src="https://via.placeholder.com/300x200" alt="Placeholder Image" />
+                </div>
+                <!-- .card-img -->
+                <div class="card-content">
+                  <h3 class="text-xl capitalize font-serif font-medium text-white mt-4">
+                    <a class="hover:text-primary-300 underline-offset-4 decoration-1 hover:underline" href="#">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</a>
+                  </h3>
+                </div>
+                <!-- .card-content -->
+              </div>
+              <!-- .card -->
+            </div>
+            <!-- .grid .grid-cols-3 -->
+          </div>
+          <!-- #latest-songs -->
+
+					<div id="top-charts" class="mb-28 last:mb-0">
+            <div class="flex items-center justify-between mb-6">
+              <h2 class="page-heading">Top Charts</h2>
+              <a class="font-medium hover:text-primary-300 flex items-center gap-1 underline-offset-4 decoration-1 hover:underline" href="#">
+                <span>View Top 10</span>
+                <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                  <g fill="none">
+                    <path
+                      d="M24 0v24H0V0h24ZM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035c-.01-.004-.019-.001-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427c-.002-.01-.009-.017-.017-.018Zm.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093c.012.004.023 0 .029-.008l.004-.014l-.034-.614c-.003-.012-.01-.02-.02-.022Zm-.715.002a.023.023 0 0 0-.027.006l-.006.014l-.034.614c0 .012.007.02.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01l-.184-.092Z"
+                    />
+                    <path fill="currentColor" d="m14.707 5.636l5.657 5.657a1 1 0 0 1 0 1.414l-5.657 5.657a1 1 0 0 1-1.414-1.414l3.95-3.95H4a1 1 0 1 1 0-2h13.243l-3.95-3.95a1 1 0 1 1 1.414-1.414Z" />
+                  </g>
+                </svg>
+              </a>
+            </div>
+            <!-- Section Heading -->
+            <ul class="top-charts__wrapper">
+							<li>
+								<a class="flex items-center justify-between py-4 border-b border-t border-gray-700 px-4 hover:bg-gray-700" href="#">
+									<span class="rank font-bold text-4xl text-primary-300">1</span>
+									<img class="song_thumbnail rounded-md shadow-lg" src="https://via.placeholder.com/100x80" alt="Placeholder Image">
+									<span class="songname text-primary-300 font-bold">Red Ruby Da Sleeze</span>
+									<span class="artist_name text-white">Nicki Minaj</span>
+									<span class="views flex items-center gap-2 text-white">
+										<svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none"><path d="M24 0v24H0V0h24ZM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035c-.01-.004-.019-.001-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427c-.002-.01-.009-.017-.017-.018Zm.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093c.012.004.023 0 .029-.008l.004-.014l-.034-.614c-.003-.012-.01-.02-.02-.022Zm-.715.002a.023.023 0 0 0-.027.006l-.006.014l-.034.614c0 .012.007.02.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01l-.184-.092Z"/><path fill="currentColor" d="M12 5c3.679 0 8.162 2.417 9.73 5.901c.146.328.27.71.27 1.099c0 .388-.123.771-.27 1.099C20.161 16.583 15.678 19 12 19c-3.679 0-8.162-2.417-9.73-5.901C2.124 12.77 2 12.389 2 12c0-.388.123-.771.27-1.099C3.839 7.417 8.322 5 12 5Zm0 3a4 4 0 1 0 0 8a4 4 0 0 0 0-8Zm0 2a2 2 0 1 1 0 4a2 2 0 0 1 0-4Z"/></g></svg>
+										<span>186.3K</span>
+									</span>
+								</a>
+							</li>
+							<li>
+								<a class="flex items-center justify-between py-4 border-b border-gray-700 px-4 hover:bg-gray-700" href="#">
+									<span class="rank font-bold text-4xl text-white">2</span>
+									<img class="song_thumbnail rounded-md shadow-lg" src="https://via.placeholder.com/100x80" alt="Placeholder Image">
+									<span class="songname text-white font-bold">Red Ruby Da Sleeze</span>
+									<span class="artist_name text-white">Nicki Minaj</span>
+									<span class="views flex items-center gap-2 text-white">
+										<svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none"><path d="M24 0v24H0V0h24ZM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035c-.01-.004-.019-.001-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427c-.002-.01-.009-.017-.017-.018Zm.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093c.012.004.023 0 .029-.008l.004-.014l-.034-.614c-.003-.012-.01-.02-.02-.022Zm-.715.002a.023.023 0 0 0-.027.006l-.006.014l-.034.614c0 .012.007.02.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01l-.184-.092Z"/><path fill="currentColor" d="M12 5c3.679 0 8.162 2.417 9.73 5.901c.146.328.27.71.27 1.099c0 .388-.123.771-.27 1.099C20.161 16.583 15.678 19 12 19c-3.679 0-8.162-2.417-9.73-5.901C2.124 12.77 2 12.389 2 12c0-.388.123-.771.27-1.099C3.839 7.417 8.322 5 12 5Zm0 3a4 4 0 1 0 0 8a4 4 0 0 0 0-8Zm0 2a2 2 0 1 1 0 4a2 2 0 0 1 0-4Z"/></g></svg>
+										<span>186.3K</span>
+									</span>
+								</a>
+							</li>
+							<li>
+								<a class="flex items-center justify-between py-4 border-b border-gray-700 px-4 hover:bg-gray-700" href="#">
+									<span class="rank font-bold text-4xl text-white">3</span>
+									<img class="song_thumbnail rounded-md shadow-lg" src="https://via.placeholder.com/100x80" alt="Placeholder Image">
+									<span class="songname text-white font-bold">Red Ruby Da Sleeze</span>
+									<span class="artist_name text-white">Nicki Minaj</span>
+									<span class="views flex items-center gap-2 text-white">
+										<svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none"><path d="M24 0v24H0V0h24ZM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035c-.01-.004-.019-.001-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427c-.002-.01-.009-.017-.017-.018Zm.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093c.012.004.023 0 .029-.008l.004-.014l-.034-.614c-.003-.012-.01-.02-.02-.022Zm-.715.002a.023.023 0 0 0-.027.006l-.006.014l-.034.614c0 .012.007.02.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01l-.184-.092Z"/><path fill="currentColor" d="M12 5c3.679 0 8.162 2.417 9.73 5.901c.146.328.27.71.27 1.099c0 .388-.123.771-.27 1.099C20.161 16.583 15.678 19 12 19c-3.679 0-8.162-2.417-9.73-5.901C2.124 12.77 2 12.389 2 12c0-.388.123-.771.27-1.099C3.839 7.417 8.322 5 12 5Zm0 3a4 4 0 1 0 0 8a4 4 0 0 0 0-8Zm0 2a2 2 0 1 1 0 4a2 2 0 0 1 0-4Z"/></g></svg>
+										<span>186.3K</span>
+									</span>
+								</a>
+							</li>
+						</ul>
+						<!-- .top-charts__wrapper -->
+          </div>
+          <!-- #top-charts -->
+
+          <div id="latest-news" class="mb-28 last:mb-0">
+            <div class="flex items-center justify-between mb-6">
+              <h2 class="page-heading">Latest News</h2>
+              <a class="font-medium hover:text-primary-300 flex items-center gap-1 underline-offset-4 decoration-1 hover:underline" href="#">
+                <span>View All</span>
+                <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                  <g fill="none">
+                    <path
+                      d="M24 0v24H0V0h24ZM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035c-.01-.004-.019-.001-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427c-.002-.01-.009-.017-.017-.018Zm.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093c.012.004.023 0 .029-.008l.004-.014l-.034-.614c-.003-.012-.01-.02-.02-.022Zm-.715.002a.023.023 0 0 0-.027.006l-.006.014l-.034.614c0 .012.007.02.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01l-.184-.092Z"
+                    />
+                    <path fill="currentColor" d="m14.707 5.636l5.657 5.657a1 1 0 0 1 0 1.414l-5.657 5.657a1 1 0 0 1-1.414-1.414l3.95-3.95H4a1 1 0 1 1 0-2h13.243l-3.95-3.95a1 1 0 1 1 1.414-1.414Z" />
+                  </g>
+                </svg>
+              </a>
+            </div>
+            <!-- Section Heading -->
+            <div class="card bg-gray-700 p-6 mb-6 rounded-lg shadow-lg grid grid-cols-4 gap-6">
+              <div class="col-span-1 card-img">
+                <img class="w-full rounded-lg shadow-lg" src="https://via.placeholder.com/300x200" alt="Placeholder Image" />
+              </div>
+              <!-- .card-img -->
+              <div class="col-span-3 card-content">
+                <h3 class="text-3xl capitalize font-serif font-medium text-white mb-4">
+                  <a class="hover:text-primary-300 underline-offset-4 decoration-1 hover:underline" href="#">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus veritatis temporibus tenetur!</a>
+                </h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam consequatur voluptas molestiae dolores accusamus pariatur nesciunt quis vitae veritatis atque. Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quae, reprehenderit...
+                  <a href="#" class="text-primary-300 underline-offset-4 decoration-1 hover:underline">[ Read More &rarr; ]</a>
+                </p>
+              </div>
+              <!-- .card-content -->
+            </div>
+            <!-- FIRST - .card -->
+            <div class="grid grid-cols-4 gap-6">
+              <div class="col-span-1 card bg-gray-700 p-6 rounded-lg shadow-lg">
+                <div class="card-img">
+                  <img class="w-full rounded-lg shadow-lg" src="https://via.placeholder.com/300x200" alt="Placeholder Image" />
+                </div>
+                <!-- .card-img -->
+                <div class="card-content">
+                  <h3 class="text-xl capitalize font-serif font-medium text-white mt-4">
+                    <a class="hover:text-primary-300 underline-offset-4 decoration-1 hover:underline" href="#">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</a>
+                  </h3>
+                </div>
+                <!-- .card-content -->
+              </div>
+              <!-- .card -->
+							<div class="col-span-1 card bg-gray-700 p-6 rounded-lg shadow-lg">
+                <div class="card-img">
+                  <img class="w-full rounded-lg shadow-lg" src="https://via.placeholder.com/300x200" alt="Placeholder Image" />
+                </div>
+                <!-- .card-img -->
+                <div class="card-content">
+                  <h3 class="text-xl capitalize font-serif font-medium text-white mt-4">
+                    <a class="hover:text-primary-300 underline-offset-4 decoration-1 hover:underline" href="#">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</a>
+                  </h3>
+                </div>
+                <!-- .card-content -->
+              </div>
+              <!-- .card -->
+              <div class="col-span-1 card bg-gray-700 p-6 rounded-lg shadow-lg">
+                <div class="card-img">
+                  <img class="w-full rounded-lg shadow-lg" src="https://via.placeholder.com/300x200" alt="Placeholder Image" />
+                </div>
+                <!-- .card-img -->
+                <div class="card-content">
+                  <h3 class="text-xl capitalize font-serif font-medium text-white mt-4">
+                    <a class="hover:text-primary-300 underline-offset-4 decoration-1 hover:underline" href="#">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</a>
+                  </h3>
+                </div>
+                <!-- .card-content -->
+              </div>
+              <!-- .card -->
+              <div class="col-span-1 card bg-gray-700 p-6 rounded-lg shadow-lg">
+                <div class="card-img">
+                  <img class="w-full rounded-lg shadow-lg" src="https://via.placeholder.com/300x200" alt="Placeholder Image" />
+                </div>
+                <!-- .card-img -->
+                <div class="card-content">
+                  <h3 class="text-xl capitalize font-serif font-medium text-white mt-4">
+                    <a class="hover:text-primary-300 underline-offset-4 decoration-1 hover:underline" href="#">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</a>
+                  </h3>
+                </div>
+                <!-- .card-content -->
+              </div>
+              <!-- .card -->
+            </div>
+            <!-- .grid .grid-cols-3 -->
+          </div>
+          <!-- #latest-news -->
+        </section>
+        <!-- #main-content -->
+      </main>
+      <!-- main -->
+    </div>
+    <!-- #master-app-wrapper -->
+  </body>
+</html>
