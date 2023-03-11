@@ -1,5 +1,5 @@
 {
-    "breadcrumbs.enabled": true,
+    "breadcrumbs.enabled": false,
     "editor.fontFamily": "'FiraCode NF', 'Cascadia Code', Consolas, 'Courier New', monospace",
     "editor.formatOnSave": false,
     "editor.wordWrap": "on",

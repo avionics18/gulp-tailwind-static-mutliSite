@@ -9,6 +9,13 @@
 }
 
 @layer components {
+  .container {
+    @apply sm:max-w-[500px] md:max-w-[660px] lg:max-w-[660px] xl:max-w-[850px] 2xl:max-w-[1000px];
+		@apply px-8 sm:px-0;
+  }
+}
+
+@layer components {
 	#main-content {
 		@apply text-gray-400;
 	}

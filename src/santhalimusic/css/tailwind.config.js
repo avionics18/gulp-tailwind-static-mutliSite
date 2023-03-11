@@ -10,10 +10,7 @@ module.exports = {
       'md': '768px',
       'lg': '992px',
       'xl': '1200px',
-    },
-    container: {
-      center: true,
-      padding: "2rem",
+      '2xl': '1400px',
     },
     extend: {
       fontFamily: {
