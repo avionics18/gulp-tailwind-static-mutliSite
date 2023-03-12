@@ -10,21 +10,16 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;500;700&family=Jost:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet" />
+    <!-- AlpineJS -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.12.0/dist/cdn.min.js"></script>
   </head>
 
   <body>
-    <div class="hidden flexx items-center justify-center gap-x-2">
-      <div class="block px-4 py-1 bg-black text-white sm:bg-white sm:text-black border border-black">default</div>
-      <div class="block px-4 py-1 bg-white text-black sm:max-md:bg-black sm:max-md:text-white border border-black">sm</div>
-      <div class="block px-4 py-1 bg-white text-black md:max-lg:bg-black md:max-lg:text-white border border-black">md</div>
-      <div class="block px-4 py-1 bg-white text-black lg:max-xl:bg-black lg:max-xl:text-white border border-black">lg</div>
-      <div class="block px-4 py-1 bg-white text-black xl:bg-black xl:text-white border border-black">xl</div>
-    </div>
-    <!-- Tailwind Breakpoint Visualiser -->
 
-    <div id="master-app-wrapper" class="h-screen overflow-hidden flex items-stretch md:relative">
+    <div id="master-app-wrapper" class="h-screen overflow-hidden flex items-stretch md:relative" x-data="{ showSidebar: false }">
       <aside
-        class="sidebar w-64 xl:w-72 bg-gray-900 border-r border-gray-700 overflow-y-auto overflow-x-hidden absolute lg:static top-0 left-0 -translate-x-full lg:translate-x-0 z-10 h-screen lg:h-auto shadow-2xl lg:shadow-none transition-transform duration-300"
+        class="sidebar w-64 xl:w-72 bg-gray-900 border-r border-gray-700 overflow-y-auto overflow-x-hidden absolute lg:static top-0 z-10 h-screen lg:h-auto shadow-2xl lg:shadow-none transition-all duration-300 lg:opacity-100"
+        x-bind:class="showSidebar ? '-left-0 opacity-100' : '-left-64 opacity-0'"
       >
         <div class="flex items-center py-8 px-10 border-b border-gray-700">
           <img class="logo w-10 rounded-md" src="https://via.placeholder.com/120x120" alt="Logo" />
@@ -154,7 +149,7 @@
       <!-- .sidebar -->
 
       <main class="flex-1 overflow-y-auto overflow-x-hidden">
-        <nav class="navbar bg-gray-900 py-8 border-b border-gray-700 lg:sticky top-0">
+        <nav class="navbar bg-gray-900 py-8 border-b border-gray-700 sticky top-0" x-data="{showSearchForm: false}">
           <div class="container mx-auto flex items-center justify-end lg:justify-between flex-wrap">
             <div class="flex items-center lg:hidden mr-auto">
               <img class="logo w-10 rounded-md" src="https://via.placeholder.com/120x120" alt="Logo" />
@@ -179,7 +174,7 @@
               </a>
             </span>
             <!-- .articles-link -->
-            <form id="searchForm" class="hidden lg:flex order-last lg:order-none w-full lg:w-64 mt-6 lg:mt-0">
+            <form id="searchForm" class="lg:flex order-last lg:order-none w-full lg:w-64 xl:w-72 mt-6 lg:mt-0" x-bind:class="showSearchForm ? 'flex' : 'hidden'">
               <input
                 class="outline-none min-w-0 flex-1 bg-gray-700 text-white py-2 px-6 rounded-tl-full rounded-bl-full border-r-2 border-gray-600 focus:text-white"
                 type="text"
@@ -229,7 +224,7 @@
                 </svg>
               </a>
               <!-- About Us Link -->
-              <button id="search-toggler-btn" class="inline-block lg:hidden px-3 hover:text-primary-300" title="Search">
+              <button id="search-toggler-btn" class="inline-block lg:hidden px-3 hover:text-primary-300" title="Search" x-on:click="showSearchForm = !showSearchForm" x-bind:class="{'text-primary-300': showSearchForm}">
                 <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                   <g fill="none" fill-rule="evenodd">
                     <path
@@ -240,9 +235,15 @@
                 </svg>
               </button>
               <!-- Search Toggler Btn -->
-              <button id="sidebar-toggler-btn" class="pl-3 flex items-center gap-2 lg:hidden bg-transparent text-white hover:text-primary-300" title="Toggle Sidebar Button">
-                <span class="text-lg hidden sm:inline">MENU</span>
-                <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <button
+                id="sidebar-toggler-btn"
+                class="pl-3 flex items-center gap-2 lg:hidden bg-transparen hover:text-primary-300"
+                title="Toggle Sidebar Button"
+                x-bind:class="showSidebar ? 'text-primary-300' : 'text-white'"
+                x-on:click="showSidebar = !showSidebar"
+              >
+                <span class="text-lg hidden sm:inline uppercase" x-text="showSidebar ? 'Close' : 'Menu'"></span>
+                <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" x-show="!showSidebar">
                   <g fill="none">
                     <path
                       d="M24 0v24H0V0h24ZM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035c-.01-.004-.019-.001-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427c-.002-.01-.009-.017-.017-.018Zm.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093c.012.004.023 0 .029-.008l.004-.014l-.034-.614c-.003-.012-.01-.02-.02-.022Zm-.715.002a.023.023 0 0 0-.027.006l-.006.014l-.034.614c0 .012.007.02.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01l-.184-.092Z"
@@ -250,6 +251,19 @@
                     <path fill="currentColor" d="M20 17.5a1.5 1.5 0 0 1 .144 2.993L20 20.5H4a1.5 1.5 0 0 1-.144-2.993L4 17.5h16Zm0-7a1.5 1.5 0 0 1 0 3H4a1.5 1.5 0 0 1 0-3h16Zm0-7a1.5 1.5 0 0 1 0 3H4a1.5 1.5 0 1 1 0-3h16Z" />
                   </g>
                 </svg>
+                <!-- Hamburger Icon -->
+                <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" x-show="showSidebar">
+                  <g fill="none" fill-rule="evenodd">
+                    <path
+                      d="M24 0v24H0V0h24ZM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035c-.01-.004-.019-.001-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427c-.002-.01-.009-.017-.017-.018Zm.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093c.012.004.023 0 .029-.008l.004-.014l-.034-.614c-.003-.012-.01-.02-.02-.022Zm-.715.002a.023.023 0 0 0-.027.006l-.006.014l-.034.614c0 .012.007.02.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01l-.184-.092Z"
+                    />
+                    <path
+                      fill="currentColor"
+                      d="m12 14.121l5.303 5.304a1.5 1.5 0 0 0 2.122-2.122L14.12 12l5.304-5.303a1.5 1.5 0 1 0-2.122-2.121L12 9.879L6.697 4.576a1.5 1.5 0 1 0-2.122 2.12L9.88 12l-5.304 5.303a1.5 1.5 0 1 0 2.122 2.122L12 14.12Z"
+                    />
+                  </g>
+                </svg>
+                <!-- Close Icon -->
               </button>
               <!-- .sidebar-toggler-btn -->
             </div>
@@ -538,7 +552,7 @@
                 </div>
                 <!-- .quick-links 2 -->
                 <div class="col-span-6 copyright">
-                  <p class="text-gray-700 font-bold">Copyright &copy; 2023 | AJOM</p>
+                  <p class="font-bold">Copyright &copy; <span x-text="new Date().getFullYear()"></span> | AJOM</p>
                 </div>
                 <!-- .copyright -->
               </div>
