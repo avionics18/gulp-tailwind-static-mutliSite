@@ -1,22 +1,30 @@
 {
-  "name": "gulp-tailwind-static-mutliSite",
+  "name": "gulp-tailwind-static-mutlisite",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "1. Create a project folder e.g.: `src/project1`\r 2. Create `src/project1/css/index.css`, `src/project1/css/tailwind.config.js` and `src/project1/js/index.js`\r \t2.1 In `css/tailwind.config.js`, don't forget to change the `content` field which contains the absolute path w.r.t project root of the files which tailwind need to purge.\r 3. Create html files inside `src/project1/`, e.g: `src/project1/index.html`, `index.html` is mandatory.\r 4. Update the `baseDir` variable to the name of your project folder in gulpfile.js",
+  "main": "gulpfile.js",
   "scripts": {
     "dev": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/avionics18/gulp-tailwind-static-mutliSite.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/avionics18/gulp-tailwind-static-mutliSite/issues"
+  },
+  "homepage": "https://github.com/avionics18/gulp-tailwind-static-mutliSite#readme",
   "devDependencies": {
-    "autoprefixer": "^10.4.7",
-    "browser-sync": "^2.27.10",
-    "cssnano": "^5.1.12",
+    "autoprefixer": "^10.4.13",
+    "browser-sync": "^2.28.3",
+    "cssnano": "^5.1.15",
     "gulp": "^4.0.2",
     "gulp-postcss": "^9.0.1",
     "gulp-rename": "^2.0.0",
     "gulp-terser": "^2.1.0",
-    "tailwindcss": "^3.1.6"
+    "tailwindcss": "^3.2.7"
   }
 }

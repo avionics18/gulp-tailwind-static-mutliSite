@@ -1,0 +1,12 @@
+{
+    "breadcrumbs.enabled": false,
+    "editor.fontFamily": "'FiraCode NF', 'Cascadia Code', Consolas, 'Courier New', monospace",
+    "editor.formatOnSave": false,
+    "editor.wordWrap": "on",
+    "[html]": {
+        "editor.defaultFormatter": "vscode.html-language-features"
+    },
+    "prettier.tabWidth": 2,
+    "editor.tabSize": 2,
+    "editor.fontSize": 16
+}
