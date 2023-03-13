@@ -13,9 +13,6 @@
     @apply sm:max-w-[500px] md:max-w-[660px] lg:max-w-[660px] xl:max-w-[850px] 2xl:max-w-[1000px];
 		@apply px-8 sm:px-0;
   }
-}
-
-@layer components {
 	#main-content {
 		@apply text-gray-400;
 	}
@@ -25,4 +22,8 @@
 	#main-content .page-subheading {
 		@apply text-4xl text-white font-medium font-serif mb-6;
 	}
+}
+
+[x-cloak] {
+	display: none;
 }
